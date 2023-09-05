@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework1", "homework1\homework1.csproj", "{4371B6BB-F304-496F-B749-0794B9D7538D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework2 if else while etc", "homework2 if else while etc\homework2 if else while etc.csproj", "{2C9D79C8-8061-4B68-BF0C-276E85967BF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework2 if else while etc", "homework2 if else while etc\homework2 if else while etc.csproj", "{2C9D79C8-8061-4B68-BF0C-276E85967BF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework6 inheritance polymorphism", "homework 6 inheritance polymorphism\homework6 inheritance polymorphism.csproj", "{DCB85D77-9CD1-40DD-B7EF-090D3A50E43F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2C9D79C8-8061-4B68-BF0C-276E85967BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C9D79C8-8061-4B68-BF0C-276E85967BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C9D79C8-8061-4B68-BF0C-276E85967BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB85D77-9CD1-40DD-B7EF-090D3A50E43F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB85D77-9CD1-40DD-B7EF-090D3A50E43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB85D77-9CD1-40DD-B7EF-090D3A50E43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB85D77-9CD1-40DD-B7EF-090D3A50E43F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
