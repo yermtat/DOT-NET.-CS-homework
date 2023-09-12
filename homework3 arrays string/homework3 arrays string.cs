@@ -380,6 +380,34 @@ cipher.
 его результат. Необходимо поддерживать только две 
 операции: +и –.*/
 
+Console.WriteLine("Enter an expression + or -: ");
+string exp = Console.ReadLine();
+
+int find_index = -1, exp_number = 0, result = 0;
+
+//string[] expArr = exp.Split('+');
+
+//foreach (string s in expArr)
+//{
+
+//}
+
+for (int i = 0; i < exp.Length; i++)
+{
+    if (exp[i] == '+' || i == exp.Length - 1)
+    {
+        result += Int32.Parse(exp[(find_index+1)..i]);
+        find_index= i;
+    }
+    else if (exp[i] == '-')
+    {
+        result -= Int32.Parse(exp[(find_index + 1)..i]);
+        find_index = i;
+    }
+}
+
+Console.WriteLine($"Result: {result}");
+
 #endregion
 
 

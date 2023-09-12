@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework2 if else while etc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework6 inheritance polymorphism", "homework 6 inheritance polymorphism\homework6 inheritance polymorphism.csproj", "{DCB85D77-9CD1-40DD-B7EF-090D3A50E43F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework3 arrays string", "homework3 arrays string\homework3 arrays string.csproj", "{FC4D7873-314A-4527-BAD4-A02128EC0F4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework3 arrays string", "homework3 arrays string\homework3 arrays string.csproj", "{FC4D7873-314A-4527-BAD4-A02128EC0F4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework7  inerfaces", "homework7  inerfaces\homework7  inerfaces.csproj", "{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FC4D7873-314A-4527-BAD4-A02128EC0F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC4D7873-314A-4527-BAD4-A02128EC0F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC4D7873-314A-4527-BAD4-A02128EC0F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
