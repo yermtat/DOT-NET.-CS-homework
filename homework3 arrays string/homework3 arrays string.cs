@@ -380,33 +380,131 @@ cipher.
 его результат. Необходимо поддерживать только две 
 операции: +и –.*/
 
-Console.WriteLine("Enter an expression + or -: ");
-string exp = Console.ReadLine();
 
-int find_index = -1, exp_number = 0, result = 0;
+//Console.WriteLine("Enter an expression + or -: ");
+//string exp = Console.ReadLine();
 
-//string[] expArr = exp.Split('+');
 
-//foreach (string s in expArr)
+//int lastSign = 0, firstSign = 0, result = 0;
+
+//for (int i = exp.Length - 1; i >= 0; i--)
 //{
-
+//    if (exp[i] == '+' || exp[i] == '-')
+//    {
+//        lastSign = i;
+//        break;
+//    }
 //}
 
-for (int i = 0; i < exp.Length; i++)
+//for (int i = 0; i < exp.Length; i++)
+//{
+//    if (exp[i] == '+' || exp[i] == '-')
+//    {
+//        firstSign = i;
+//        break;
+//    }
+//}
+
+
+
+//result = Int32.Parse(exp[..firstSign]);
+
+//if (firstSign == lastSign)
+//{
+//    if (exp[lastSign] == '+')
+//    {
+//        result += Int32.Parse(exp[lastSign..]);
+
+//    }
+//}
+//else
+//{
+//    int signIndex = firstSign;
+
+//    for (int i = firstSign+1; i <= lastSign; i++)
+//    {
+//        if (exp[i] == '+' || exp[i] == '-')
+//        {
+//            if (exp[signIndex] == '+')
+//            {
+//                result += Int32.Parse(exp[(signIndex + 1)..i]);
+
+//            }
+//            else if (exp[signIndex] == '-')
+//            {
+//                result -= Int32.Parse(exp[(signIndex + 1)..i]);
+//            }
+//            signIndex = i;
+//        }
+//    }
+
+//    if (exp[lastSign] == '+')
+//    {
+//        result += Int32.Parse(exp[(lastSign + 1)..]);
+//    }
+//    else if (exp[lastSign] == '-')
+//    {
+//        result -= Int32.Parse(exp[(lastSign + 1)..]);
+//    }
+//}
+//Console.WriteLine($"Result: {result}");
+
+#endregion
+
+#region task 6
+
+/*Задание 6
+Пользователь с клавиатуры вводит некоторый текст. 
+Приложение должно изменять регистр первой буквы 
+каждого предложения на букву в верхнем регистре.*/
+
+
+//string str = "in cryptography, a caesar cipher, also known as caesar's cipher, the shift cipher, caesar's code, " +
+//    "or caesar shift, is one of the simplest and most widely known encryption techniques. it is a type of substitution cipher " +
+//    "in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. " +
+//    "for example, with a left shift of 3, d would be replaced by a, e would become b, and so on. " +
+//    "the method is named after julius caesar, who used it in his private correspondence.";
+
+Console.WriteLine("Enter any text:");
+string str = Console.ReadLine();
+
+string[] strArr = str.Split('.', '?', '!');
+
+string newStr = default;
+int count = 0;
+
+for (int i = 0; i < strArr.Length - 1; i++)
 {
-    if (exp[i] == '+' || i == exp.Length - 1)
+    count = 0;
+    while (strArr[i][count] == ' ')
     {
-        result += Int32.Parse(exp[(find_index+1)..i]);
-        find_index= i;
+        count++;
     }
-    else if (exp[i] == '-')
+
+    for (int j = 0; j < count; j++)
     {
-        result -= Int32.Parse(exp[(find_index + 1)..i]);
-        find_index = i;
+        newStr += ' ';
     }
+    newStr += char.ToUpper(strArr[i][count]) + strArr[i][(count + 1)..];
+
+    if (str[newStr.Length] == '.')
+    {
+        newStr += '.';
+    }
+    else if (str[newStr.Length] == '?')
+    {
+        newStr += '?';
+    }
+    else if (str[newStr.Length] == '!')
+    {
+        newStr += '!';
+    }
+
 }
 
-Console.WriteLine($"Result: {result}");
+Console.WriteLine(newStr);
+
+
 
 #endregion
 

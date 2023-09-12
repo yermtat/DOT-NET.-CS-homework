@@ -12,11 +12,10 @@
 в параметре info.
 Напишите код для тестирования полученной функциональности.*/
 
-
-
 //Array arr = new();
 //arr.Show();
 //arr.Show("\"Never gonna give you up never gonna let you down never gonna run around and desert you\" Rick Astley");
+
 
 /*Задание 2
 Создайте интерфейс IMath. В нём должно быть четыре метода:
@@ -46,13 +45,13 @@ true, сортируем по возрастанию. Если isAsc равен 
 сортируем по убыванию.
 */
 
-Array arrRandom = new Array(45);
-arrRandom.Show();
-arrRandom.SortAsc();
-arrRandom.Show();
-arrRandom.SortDesc();
-arrRandom.Show();
-arrRandom.SortByParam(true);
-arrRandom.Show();
-arrRandom.SortByParam(false);
-arrRandom.Show();
+//Array arrRandom = new Array(45);
+//arrRandom.Show();
+//arrRandom.SortAsc();
+//arrRandom.Show();
+//arrRandom.SortDesc();
+//arrRandom.Show();
+//arrRandom.SortByParam(true);
+//arrRandom.Show();
+//arrRandom.SortByParam(false);
+//arrRandom.Show();
