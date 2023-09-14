@@ -136,6 +136,7 @@
 //Console.WriteLine($"Summ of even A numbers: {evenSummA}, summ of odd columns B numbers: {oddSummColB}");
 #endregion
 
+
 #region task 2
 
 /*Задание 2
@@ -235,6 +236,7 @@
 
 #endregion
 
+
 #region task 3
 
 /*Задание 3
@@ -306,6 +308,7 @@ cipher.
 
 #endregion
 
+
 #region task 4
 
 /* Задание 4
@@ -373,6 +376,7 @@ cipher.
 
 #endregion
 
+
 #region task 5
 
 /*Задание 5
@@ -384,72 +388,42 @@ cipher.
 //Console.WriteLine("Enter an expression + or -: ");
 //string exp = Console.ReadLine();
 
+//string[] expArr = exp.Split('+', '-');
 
-//int lastSign = 0, firstSign = 0, result = 0;
+//int signCount = 0;
 
-//for (int i = exp.Length - 1; i >= 0; i--)
+//int start = 0, result = 0;
+
+//if (exp[0] == '-')
 //{
-//    if (exp[i] == '+' || exp[i] == '-')
-//    {
-//        lastSign = i;
-//        break;
-//    }
-//}
-
-//for (int i = 0; i < exp.Length; i++)
-//{
-//    if (exp[i] == '+' || exp[i] == '-')
-//    {
-//        firstSign = i;
-//        break;
-//    }
-//}
-
-
-
-//result = Int32.Parse(exp[..firstSign]);
-
-//if (firstSign == lastSign)
-//{
-//    if (exp[lastSign] == '+')
-//    {
-//        result += Int32.Parse(exp[lastSign..]);
-
-//    }
+//    result -= Int32.Parse(expArr[1]);
+//    start = 1;
+//    signCount++;
 //}
 //else
 //{
-//    int signIndex = firstSign;
+//    result += Int32.Parse(expArr[0]);
+//}
 
-//    for (int i = firstSign+1; i <= lastSign; i++)
+
+//for (int i = start; i < exp.Length; i++)
+//{
+//    if (exp[i] == '+')
 //    {
-//        if (exp[i] == '+' || exp[i] == '-')
-//        {
-//            if (exp[signIndex] == '+')
-//            {
-//                result += Int32.Parse(exp[(signIndex + 1)..i]);
-
-//            }
-//            else if (exp[signIndex] == '-')
-//            {
-//                result -= Int32.Parse(exp[(signIndex + 1)..i]);
-//            }
-//            signIndex = i;
-//        }
+//        result += Int32.Parse(expArr[signCount + 1]);
+//        signCount++;
 //    }
-
-//    if (exp[lastSign] == '+')
+//    else if (exp[i] == '-')
 //    {
-//        result += Int32.Parse(exp[(lastSign + 1)..]);
-//    }
-//    else if (exp[lastSign] == '-')
-//    {
-//        result -= Int32.Parse(exp[(lastSign + 1)..]);
+//        result -= Int32.Parse(expArr[signCount + 1]);
+//        signCount++;
 //    }
 //}
+
 //Console.WriteLine($"Result: {result}");
 
 #endregion
+
 
 #region task 6
 
@@ -459,55 +433,101 @@ cipher.
 каждого предложения на букву в верхнем регистре.*/
 
 
-//string str = "in cryptography, a caesar cipher, also known as caesar's cipher, the shift cipher, caesar's code, " +
-//    "or caesar shift, is one of the simplest and most widely known encryption techniques. it is a type of substitution cipher " +
-//    "in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. " +
-//    "for example, with a left shift of 3, d would be replaced by a, e would become b, and so on. " +
-//    "the method is named after julius caesar, who used it in his private correspondence.";
+//Console.WriteLine("Enter any text:");
+//string str = Console.ReadLine();
 
-Console.WriteLine("Enter any text:");
-string str = Console.ReadLine();
+//string[] strArr = str.Split('.', '?', '!');
 
-string[] strArr = str.Split('.', '?', '!');
+//string newStr = default;
+//int count = 0;
 
-string newStr = default;
-int count = 0;
+//for (int i = 0; i < strArr.Length - 1; i++)
+//{
+//    count = 0;
+//    while (strArr[i][count] == ' ')
+//    {
+//        count++;
+//    }
 
-for (int i = 0; i < strArr.Length - 1; i++)
-{
-    count = 0;
-    while (strArr[i][count] == ' ')
-    {
-        count++;
-    }
+//    for (int j = 0; j < count; j++)
+//    {
+//        newStr += ' ';
+//    }
+//    newStr += char.ToUpper(strArr[i][count]) + strArr[i][(count + 1)..];
 
-    for (int j = 0; j < count; j++)
-    {
-        newStr += ' ';
-    }
-    newStr += char.ToUpper(strArr[i][count]) + strArr[i][(count + 1)..];
+//    if (str[newStr.Length] == '.')
+//    {
+//        newStr += '.';
+//    }
+//    else if (str[newStr.Length] == '?')
+//    {
+//        newStr += '?';
+//    }
+//    else if (str[newStr.Length] == '!')
+//    {
+//        newStr += '!';
+//    }
 
-    if (str[newStr.Length] == '.')
-    {
-        newStr += '.';
-    }
-    else if (str[newStr.Length] == '?')
-    {
-        newStr += '?';
-    }
-    else if (str[newStr.Length] == '!')
-    {
-        newStr += '!';
-    }
+//}
 
-}
-
-Console.WriteLine(newStr);
+//Console.WriteLine(newStr);
 
 
 
 #endregion
 
+
+#region task 7
+
+/*Задание 7
+Создайте приложение, проверяющее текст на недопустимые слова. Если недопустимое слово найдено, оно 
+должно быть заменено на набор символов *. По итогам 
+работы приложения необходимо показать статистику 
+действий. */
+
+string str = @"To be, or not to be, that is the question,
+Whether 'tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune,
+Or to take arms against a sea of troubles,
+And by opposing end them? To die: to sleep;
+No more; and by a sleep to say we end
+The heart-ache and the thousand natural shocks
+That flesh is heir to, 'tis a consummation
+Devoutly to be wish'd. To die, to sleep.";
+
+string word = "Die".ToLower();
+string strLow = str.ToLower();
+
+int findStart = 0, changeCount = 0;
+string newStr = default;
+
+
+while (strLow.Contains(word))
+{
+
+    newStr += str[findStart..(strLow.IndexOf(word) + findStart)];
+
+
+    for (int i = 0; i < word.Length; i++)
+    {
+        newStr += '*';
+    }
+
+    strLow = strLow[(strLow.IndexOf(word) + word.Length)..];
+
+    findStart = newStr.Length;
+    changeCount++;
+}
+
+newStr += str[newStr.Length..];
+
+Console.WriteLine(newStr);
+Console.WriteLine($"\nWord {word} was changed {changeCount} times");
+//Console.WriteLine(strLow.IndexOf(word));
+//Console.WriteLine(strLow.LastIndexOf(word));
+
+
+#endregion
 
 
 void showArr(int[,] arr)
@@ -520,4 +540,20 @@ void showArr(int[,] arr)
         }
         Console.WriteLine();
     }
+}
+
+string changeWord(string word, string str)
+{
+    string[] strArr = str.Split(word);
+
+    for (int i = 0; i < strArr.Length; i++)
+    {
+        str += strArr[i];
+        for (int j = 0; j < word.Length; j++)
+        {
+            str += "*";
+        }
+    }
+
+    return str;
 }
