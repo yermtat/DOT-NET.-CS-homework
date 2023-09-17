@@ -485,47 +485,45 @@ cipher.
 работы приложения необходимо показать статистику 
 действий. */
 
-string str = @"To be, or not to be, that is the question,
-Whether 'tis nobler in the mind to suffer
-The slings and arrows of outrageous fortune,
-Or to take arms against a sea of troubles,
-And by opposing end them? To die: to sleep;
-No more; and by a sleep to say we end
-The heart-ache and the thousand natural shocks
-That flesh is heir to, 'tis a consummation
-Devoutly to be wish'd. To die, to sleep.";
 
-string word = "Die".ToLower();
-string strLow = str.ToLower();
+//string str = @"To be, or not to be, that is the question,
+//Whether 'tis nobler in the mind to suffer
+//The slings and arrows of outrageous fortune,
+//Or to take arms against a sea of troubles,
+//And by opposing end them? To die: to sleep;
+//No more; and by a sleep to say we end
+//The heart-ache and the thousand natural shocks
+//That flesh is heir to, 'tis a consummation
+//Devoutly to be wish'd. To die, to sleep.";
 
-int findStart = 0, changeCount = 0;
-string newStr = default;
+//string word = "Die".ToLower();
+//string strLow = str.ToLower();
 
-
-while (strLow.Contains(word))
-{
-
-    newStr += str[findStart..(strLow.IndexOf(word) + findStart)];
+//int findStart = 0, changeCount = 0;
+//string newStr = default;
 
 
-    for (int i = 0; i < word.Length; i++)
-    {
-        newStr += '*';
-    }
+//while (strLow.Contains(word))
+//{
 
-    strLow = strLow[(strLow.IndexOf(word) + word.Length)..];
+//    newStr += str[findStart..(strLow.IndexOf(word) + findStart)];
 
-    findStart = newStr.Length;
-    changeCount++;
-}
 
-newStr += str[newStr.Length..];
+//    for (int i = 0; i < word.Length; i++)
+//    {
+//        newStr += '*';
+//    }
 
-Console.WriteLine(newStr);
-Console.WriteLine($"\nWord {word} was changed {changeCount} times");
-//Console.WriteLine(strLow.IndexOf(word));
-//Console.WriteLine(strLow.LastIndexOf(word));
+//    strLow = strLow[(strLow.IndexOf(word) + word.Length)..];
 
+//    findStart = newStr.Length;
+//    changeCount++;
+//}
+
+//newStr += str[newStr.Length..];
+
+//Console.WriteLine(newStr);
+//Console.WriteLine($"\nWord {word} was changed {changeCount} times");
 
 #endregion
 
@@ -542,18 +540,4 @@ void showArr(int[,] arr)
     }
 }
 
-string changeWord(string word, string str)
-{
-    string[] strArr = str.Split(word);
 
-    for (int i = 0; i < strArr.Length; i++)
-    {
-        str += strArr[i];
-        for (int j = 0; j < word.Length; j++)
-        {
-            str += "*";
-        }
-    }
-
-    return str;
-}

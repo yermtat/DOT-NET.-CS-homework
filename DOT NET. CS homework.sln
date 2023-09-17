@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework6 inheritance polym
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework3 arrays string", "homework3 arrays string\homework3 arrays string.csproj", "{FC4D7873-314A-4527-BAD4-A02128EC0F4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework7  inerfaces", "homework7  inerfaces\homework7  inerfaces.csproj", "{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework7  inerfaces", "homework7  inerfaces\homework7  inerfaces.csproj", "{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework4 struct class", "homework4 struct class\homework4 struct class.csproj", "{19502DAD-37DD-4CBA-A943-87231EB9116A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D23FCCE-1D17-40DB-BE2B-A9C99BA5F6C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19502DAD-37DD-4CBA-A943-87231EB9116A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19502DAD-37DD-4CBA-A943-87231EB9116A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19502DAD-37DD-4CBA-A943-87231EB9116A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19502DAD-37DD-4CBA-A943-87231EB9116A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
