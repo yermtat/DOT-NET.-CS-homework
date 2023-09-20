@@ -1,0 +1,1 @@
+https://github.com/yermtat/DOT-NET.-CS-homework/blob/master/homework4%20struct%20class/Program.cs
