@@ -1,4 +1,6 @@
 ﻿
+using System.Diagnostics;
+
 List<Debtor> debtors = new List<Debtor> {
             new Debtor("Shirley T. Qualls", DateTime.Parse("March 30, 1932"), "530-662-7732", "ShirleyTQualls@teleworm.us", "3565 Eagles Nest Drive Woodland, CA 95695", 2414),
             new Debtor("Danielle W. Grier", DateTime.Parse("October 18, 1953"), "321-473-4178", "DanielleWGrier@rhyta.com", "1973 Stoneybrook Road Maitland, FL 32751", 3599),
@@ -77,9 +79,9 @@ name18.ForEach(Console.WriteLine);*/
 
 //  6. Вывести тех должников, возраст которых - четное число, отсортировав по сумме цифр года рождения.
 
-var evenAge = debtors.Where(d => (DateTime.Now.Year - d.BirthDay.Year) % 2 == 0).OrderBy(s => (s.BirthDay.Year % 10 + (s.BirthDay.Year % 100 / 10)
+/*var evenAge = debtors.Where(d => (DateTime.Now.Year - d.BirthDay.Year) % 2 == 0).OrderBy(s => (s.BirthDay.Year % 10 + (s.BirthDay.Year % 100 / 10)
 + (s.BirthDay.Year % 1000 / 100) + (s.BirthDay.Year % 10000 / 1000))).ToList();
-evenAge.ForEach(Console.WriteLine);
+evenAge.ForEach(Console.WriteLine);*/
 
 //  7. Вывести тех должников, родившихся зимой, отсортировав по почтовому индексу (5 цифр в конце адреса).
 
@@ -100,17 +102,71 @@ aboveAverage.OrderByDescending(o => o.Debt).ToList().ForEach(Console.WriteLine);
 without8.ForEach(o => Console.WriteLine($"{o.FullName[o.FullName.LastIndexOf(' ')..]} {DateTime.Now.Year - o.BirthDay.Year} {o.Debt}"));*/
 
 // 10. Вывести должника, у которого самая длинная фамилия среди должников с самым коротким именем.
+
+/*var shortNameList = debtors.Where(d => d.FullName.IndexOf(' ') == debtors.Min(m => m.FullName.IndexOf(' '))).ToList();
+var longName = shortNameList.Where(l => l.FullName.Length - l.FullName.LastIndexOf(' ') == shortNameList.Max(n => n.FullName.Length - n.FullName.LastIndexOf(' '))).ToList();
+
+longName.ForEach(Console.WriteLine);*/
+
 // 11. Вывести должников, у которых в имени и фамилии есть хотя бы 3 одинаковые буквы, отсортировав их в алфавитном порядке по среднему имени. 
+
+//var sameLetters = debtors.Where(d => d.FullName.Where(l => d.FullName.Count(m => m == l) >= 3));
+
+
+
 // 12. Вывести самый популярный почтовый домен среди должников.
+
+//var popularEmail = debtors.Max(debtors.Count(c => c.Email[c.Email.IndexOf('@')..]));
+//List<string> emails = debtors.Select(d => d.Email[d.Email.IndexOf('@')..]).ToList();
+//var singleemails = emails.Distinct().ToList();
+
+//var single = singleemails.GetEnumerator();
+//string popular = emails.Max(emails.Count(c => c == single.Current);
+
+var email = from d in debtors
+            group d.Email[d.Email.IndexOf('@')..] by debtors.Count();
+
+foreach (var item in email)
+{
+    Console.WriteLine(item.Key);
+    Console.WriteLine(item);
+}
+
 // 13. Вывести год, в который родилось наибольшее количество должников.
+
+
 // 14. Вывести Топ-5 должников по сумме долга.
+
+/*var top5 = debtors.OrderByDescending(o=> o.Debt).Take(5).ToList();
+top5.ForEach(Console.WriteLine);*/
+
 // 15. Вывести общую сумму долга всех должников.
+
+/*int summ = debtors.Sum(d => d.Debt);
+Console.WriteLine(summ);*/
+
 // 16. Вывести имена и фамилии людей, переживших Вторую Мировую Войну.
+
+/*var preWW = debtors.Where(d => d.BirthDay.Year < 1945).ToList();
+preWW.ForEach(f => Console.WriteLine($"{f.FullName[..f.FullName.IndexOf(' ')]}{f.FullName[f.FullName.LastIndexOf(' ')..]}"));*/
+
 // 17. Вывести фамилии и возраст людей, родившихся после развала СССР.
+
+/*var pastUSSR = debtors.Where(d => d.BirthDay.Year > 1991).ToList();
+pastUSSR.ForEach(f => Console.WriteLine($"{f.FullName[(f.FullName.LastIndexOf(' ') + 1)..]}, {DateTime.Now.Year - f.BirthDay.Year}"));*/
+
 // 18. Вывести номера телефона и суммы долга людей, в номере телефона которых нет повторяющихся цифр.
+
+
 // 19. Представим, что все должники начали отдавать свои долги с текущего дня по 500 каждый месяц. 
 //     Вывести на экран список должников, которые успеют отдать долг до своего следующего дня рождения.
 // 20. Вывести тех должников, из букв имени и фамилии которых можно собрать слово "smile".
+
+/*var smilename = debtors.Where(d => d.FullName.ToLower().Contains('s') == true && d.FullName.ToLower().Contains('m') == true && 
+d.FullName.ToLower().Contains('i') == true && d.FullName.ToLower().Contains('l') == true && d.FullName.ToLower().Contains('e') == true).ToList();
+smilename.ForEach(Console.WriteLine);*/
+
+
 
 // Максимально используйте LINQ.
 // https://metanit.com/sharp/tutorial/15.1.php
