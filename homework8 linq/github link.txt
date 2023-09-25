@@ -1,0 +1,1 @@
+https://github.com/yermtat/DOT-NET.-CS-homework/blob/master/homework8%20linq/Program.cs

@@ -110,27 +110,9 @@ longName.ForEach(Console.WriteLine);*/
 
 // 11. Вывести должников, у которых в имени и фамилии есть хотя бы 3 одинаковые буквы, отсортировав их в алфавитном порядке по среднему имени. 
 
-//var sameLetters = debtors.Where(d => d.FullName.Where(l => d.FullName.Count(m => m == l) >= 3));
-
-
 
 // 12. Вывести самый популярный почтовый домен среди должников.
 
-//var popularEmail = debtors.Max(debtors.Count(c => c.Email[c.Email.IndexOf('@')..]));
-//List<string> emails = debtors.Select(d => d.Email[d.Email.IndexOf('@')..]).ToList();
-//var singleemails = emails.Distinct().ToList();
-
-//var single = singleemails.GetEnumerator();
-//string popular = emails.Max(emails.Count(c => c == single.Current);
-
-var email = from d in debtors
-            group d.Email[d.Email.IndexOf('@')..] by debtors.Count();
-
-foreach (var item in email)
-{
-    Console.WriteLine(item.Key);
-    Console.WriteLine(item);
-}
 
 // 13. Вывести год, в который родилось наибольшее количество должников.
 
@@ -155,11 +137,13 @@ preWW.ForEach(f => Console.WriteLine($"{f.FullName[..f.FullName.IndexOf(' ')]}{f
 /*var pastUSSR = debtors.Where(d => d.BirthDay.Year > 1991).ToList();
 pastUSSR.ForEach(f => Console.WriteLine($"{f.FullName[(f.FullName.LastIndexOf(' ') + 1)..]}, {DateTime.Now.Year - f.BirthDay.Year}"));*/
 
-// 18. Вывести номера телефона и суммы долга людей, в номере телефона которых нет повторяющихся цифр.
 
+// 18. Вывести номера телефона и суммы долга людей, в номере телефона которых нет повторяющихся цифр.
 
 // 19. Представим, что все должники начали отдавать свои долги с текущего дня по 500 каждый месяц. 
 //     Вывести на экран список должников, которые успеют отдать долг до своего следующего дня рождения.
+
+
 // 20. Вывести тех должников, из букв имени и фамилии которых можно собрать слово "smile".
 
 /*var smilename = debtors.Where(d => d.FullName.ToLower().Contains('s') == true && d.FullName.ToLower().Contains('m') == true && 
